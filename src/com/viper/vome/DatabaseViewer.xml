@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment></comment>
+	<entry key="databases-filename">etc/databases.xml</entry>
+	<entry key="history-filename">etc/sqlhistory.xml</entry>
+	<entry key="backup.filename">etc/backup.properties</entry>
+	<entry key="default-backup-filename">backups/today.sql</entry>
+	<entry key="default.export.filename">etc/meta.xml</entry>
+	<entry key="data.resource.filename">C:\tools\glassfish\domains\domain1\applications\j2ee-modules\education\WEB-INF\web.xml</entry>
+	<entry key="server.scan.directory">C:\tools\glassfish</entry>
+	<entry key="import.export.filenames">etc/importexport.xml</entry>
+	<entry key="seven-eight">lay them straight</entry>
+	<entry key="table.row.count">2</entry>
+	<entry key="table.even.color">#FFFFFF</entry>
+	<entry key="table.odd.color">#FFFFCC</entry>
+	<entry key="table.number.rows.per.page">10000</entry>
+	<entry key="SplitPane.DividerLocation">350</entry>
+	<!--  Wizard font properties  -->
+	<entry key="wizard-header-font">Arial-BOLD-18</entry>
+	<entry key="wizard-header-label-font">Arial-PLAIN-18</entry>
+	<!--  Backup wizard labels -->
+	<entry key="backup-wizard.add-drop-database.Name">Add Drop Database </entry>
+	<entry key="backup-wizard.add-drop-table.Name">Add Drop Table </entry>
+	<entry key="backup-wizard.add-locks.Name">Add Locks </entry>
+	<entry key="backup-wizard.all-databases.Name">All Databases </entry>
+	<entry key="backup-wizard.all-tables.Name">All Tables </entry>
+	<entry key="backup-wizard.allow-keywords.Name">Allow Keywords </entry>
+	<entry key="backup-wizard.comments.Name">Comments </entry>
+	<entry key="backup-wizard.compact.Name">Compact </entry>
+	<entry key="backup-wizard.compatible.Name">Compatible </entry>
+	<entry key="backup-wizard.complete-insert.Name">Complete Insert </entry>
+	<entry key="backup-wizard.create-options.Name">Create Options </entry>
+	<entry key="backup-wizard.databases.Name">Databases </entry>
+	<entry key="backup-wizard.debug.Name">Debug </entry>
+	<entry key="backup-wizard.debug-info.Name">Debug Info </entry>
+	<entry key="backup-wizard.delayed-insert.Name">Delayed Insert </entry>
+	<entry key="backup-wizard.delete-master-logs.Name">Delete Master Logs </entry>
+	<entry key="backup-wizard.disable-keys.Name">Disable Keys </entry>
+	<entry key="backup-wizard.dump-date.Name">Dump Date </entry>
+	<entry key="backup-wizard.events.Name">Events </entry>
+	<entry key="backup-wizard.extended-insert.Name">Extended Insert </entry>
+	<entry key="backup-wizard.fields-enclosed-by.Name">Fields Enclosed By </entry>
+	<entry key="backup-wizard.fields-escaped-by.Name">Fields Escaped By </entry>
+	<entry key="backup-wizard.fields-optionally-enclosed-by.Name">Fields Optionally Enclosed By </entry>
+	<entry key="backup-wizard.fields-terminated-by.Name">Fields Terminated By </entry>
+	<entry key="backup-wizard.first-slave.Name">First Slave </entry>
+	<entry key="backup-wizard.flush-logs.Name">Flush Logs </entry>
+	<entry key="backup-wizard.flush-privileges.Name">Flush Privileges </entry>
+	<entry key="backup-wizard.hex-blob.Name">Hex Blob </entry>
+	<entry key="backup-wizard.ignore-table.Name">Ignore Table </entry>
+	<entry key="backup-wizard.insert-ignore.Name">Insert Ignore </entry>
+	<entry key="backup-wizard.lines-terminated-by.Name">Lines Terminated By </entry>
+	<entry key="backup-wizard.lock-all-tables.Name">Lock All Tables </entry>
+	<entry key="backup-wizard.lock-tables.Name">Lock Tables </entry>
+	<entry key="backup-wizard.log-error.Name">Log Error </entry>
+	<entry key="backup-wizard.master-data.Name">Master Data </entry>
+	<entry key="backup-wizard.max_allowed_packet.Name">Max Allowed Packet </entry>
+	<entry key="backup-wizard.net_buffer_length.Name">Net Buffer Length </entry>
+	<entry key="backup-wizard.no-autocommit.Name">No Autocommit </entry>
+	<entry key="backup-wizard.no-create-db.Name">No Create Database </entry>
+	<entry key="backup-wizard.no-create-info.Name">No Create Info </entry>
+	<entry key="backup-wizard.no-data.Name">No Data </entry>
+	<entry key="backup-wizard.no-set-names.Name">No Set Names </entry>
+	<entry key="backup-wizard.opt.Name">Opt </entry>
+	<entry key="backup-wizard.order-by-primary.Name">Order By Primary </entry>
+	<entry key="backup-wizard.password.Name">Password </entry>
+	<entry key="backup-wizard.pipe.Name">Pipe </entry>
+	<entry key="backup-wizard.port.Name">Port </entry>
+	<entry key="backup-wizard.quick.Name">Quick </entry>
+	<entry key="backup-wizard.quote-names.Name">Quote Names </entry>
+	<entry key="backup-wizard.replace.Name">Replace </entry>
+	<entry key="backup-wizard.result-file.Name">Result File </entry>
+	<entry key="backup-wizard.routines.Name">Routines </entry>
+	<entry key="backup-wizard.set-charset.Name">Set Charset </entry>
+	<entry key="backup-wizard.single-transaction.Name">Single Transaction </entry>
+	<entry key="backup-wizard.skip-add-drop-table.Name">Skip Add Drop Table </entry>
+	<entry key="backup-wizard.skip-add-locks.Name">Skip Add Locks </entry>
+	<entry key="backup-wizard.skip-comments.Name">Skip Comments </entry>
+	<entry key="backup-wizard.skip-compact.Name">Skip Compact </entry>
+	<entry key="backup-wizard.skip-disable-keys.Name">Skip Disable Keys </entry>
+	<entry key="backup-wizard.skip-extended-insert.Name">Skip Extended Insert </entry>
+	<entry key="backup-wizard.skip-opt.Name">Skip Opt </entry>
+	<entry key="backup-wizard.skip-quick.Name">Skip Quick </entry>
+	<entry key="backup-wizard.skip-quote-names.Name">Skip Quote Names </entry>
+	<entry key="backup-wizard.skip-set-charset.Name">Skip Set Charset </entry>
+	<entry key="backup-wizard.skip-triggers.Name">Skip Triggers </entry>
+	<entry key="backup-wizard.skip-tz-utc.Name">Skip Timezone UTC </entry>
+	<entry key="backup-wizard.ssl-ca.Name">SSL CA </entry>
+	<entry key="backup-wizard.ssl-capath.Name">SSL CaPath </entry>
+	<entry key="backup-wizard.ssl-cert.Name">SSL Cert </entry>
+	<entry key="backup-wizard.ssl-cipher.Name">SSL Cipher </entry>
+	<entry key="backup-wizard.ssl-key.Name">SSL Key </entry>
+	<entry key="backup-wizard.ssl-verify-server-cert.Name">SSL Verify Server Cert </entry>
+	<entry key="backup-wizard.tab.Name">Tab </entry>
+	<entry key="backup-wizard.tables.Name">Tables </entry>
+	<entry key="backup-wizard.triggers.Name">Triggers </entry>
+	<entry key="backup-wizard.tz-utc.Name">Timezone UTC </entry>
+	<entry key="backup-wizard.verbose.Name">Verbose </entry>
+	<entry key="backup-wizard.version.Name">Version </entry>
+	<entry key="backup-wizard.where.Name">Where </entry>
+	<entry key="backup-wizard.xml.Name">XML </entry>
+	<!--   wizard properties -->
+	<entry key="backup-wizard.add-drop-database.ShortDescription">Add a DROP DATABASE statement before each CREATE DATABASE statement </entry>
+	<entry key="backup-wizard.add-drop-table.ShortDescription"> Add a DROP TABLE statement before each CREATE TABLE statement </entry>
+	<entry key="backup-wizard.add-locks.ShortDescription"> Surround each table dump with LOCK TABLES and UNLOCK TABLES statements </entry>
+	<entry key="backup-wizard.all-databases.ShortDescription"> Dump all tables in all databases </entry>
+	<entry key="backup-wizard.allow-keywords.ShortDescription"> Allow creation of column names that are keywords </entry>
+	<entry key="backup-wizard.comments.ShortDescription"> Add comments to the dump file </entry>
+	<entry key="backup-wizard.compact.ShortDescription"> Produce less verbose output </entry>
+	<entry key="backup-wizard.compatible.ShortDescription"> Produce output that is more compatible with other database systems or with older MySQL servers </entry>
+	<entry key="backup-wizard.complete-insert.ShortDescription"> Use complete INSERT statements that include column names </entry>
+	<entry key="backup-wizard.create-options.ShortDescription"> Include all MySQL-specific table options in the CREATE TABLE statements </entry>
+	<entry key="backup-wizard.databases.ShortDescription"> Dump several databases </entry>
+	<entry key="backup-wizard.debug.ShortDescription"> Write a debugging log </entry>
+	<entry key="backup-wizard.debug-info.ShortDescription"> Print debugging information, memory and CPU statistics when the program exits 5.0.32 </entry>
+	<entry key="backup-wizard.delayed-insert.ShortDescription"> Write INSERT DELAYED statements rather than INSERT statements </entry>
+	<entry key="backup-wizard.delete-master-logs.ShortDescription"> On a master replication server, delete the binary logs after performing the dump operation </entry>
+	<entry key="backup-wizard.disable-keys.ShortDescription"> For each table, surround the INSERT statements with disable and enable keys statements </entry>
+	<entry key="backup-wizard.dump-date.ShortDescription"> Include dump date in "Dump completed on" comment if --comments is given 5.0.52 </entry>
+	<entry key="backup-wizard.events.ShortDescription"> Dump events from the dumped databases </entry>
+	<entry key="backup-wizard.extended-insert.ShortDescription"> Use multiple-row INSERT syntax that include several VALUES lists </entry>
+	<entry key="backup-wizard.fields-enclosed-by.ShortDescription"> This option is used with the -T option and has the same meaning as the corresponding clause for LOAD DATA INFILE </entry>
+	<entry key="backup-wizard.fields-escaped-by.ShortDescription"> This option is used with the -T option and has the same meaning as the corresponding clause for LOAD DATA INFILE </entry>
+	<entry key="backup-wizard.fields-optionally-enclosed-by.ShortDescription"> This option is used with the -T option and has the same meaning as the corresponding clause for LOAD DATA INFILE </entry>
+	<entry key="backup-wizard.fields-terminated-by.ShortDescription"> This option is used with the -T option and has the same meaning as the corresponding clause for LOAD DATA INFILE </entry>
+	<entry key="backup-wizard.first-slave.ShortDescription"> Deprecated. Now renamed to --lock-all-tables </entry>
+	<entry key="backup-wizard.flush-logs.ShortDescription"> Flush the MySQL server log files before starting the dump </entry>
+	<entry key="backup-wizard.flush-privileges.ShortDescription"> Emit a FLUSH PRIVILEGES statement after dumping the mysql database </entry>
+	<entry key="backup-wizard.hex-blob.ShortDescription"> Dump binary columns using hexadecimal notation (for example, 'abc' becomes 0x616263) </entry>
+	<entry key="backup-wizard.ignore-table.ShortDescription"> Do not dump the given table </entry>
+	<entry key="backup-wizard.insert-ignore.ShortDescription"> Write INSERT statements with the IGNORE option </entry>
+	<entry key="backup-wizard.lines-terminated-by.ShortDescription"> This option is used with the -T option and has the same meaning as the corresponding clause for LOAD DATA INFILE </entry>
+	<entry key="backup-wizard.lock-all-tables.ShortDescription"> Lock all tables across all databases </entry>
+	<entry key="backup-wizard.lock-tables.ShortDescription"> Lock all tables before dumping them </entry>
+	<entry key="backup-wizard.log-error.ShortDescription"> Append warnings and errors to the named file 5.0.42 </entry>
+	<entry key="backup-wizard.master-data.ShortDescription"> Write the binary log filename and position to the output </entry>
+	<entry key="backup-wizard.max_allowed_packet.ShortDescription"> The maximum packet length to send to or receive from the server </entry>
+	<entry key="backup-wizard.net_buffer_length.ShortDescription"> The buffer size for TCP/IP and socket communication </entry>
+	<entry key="backup-wizard.no-autocommit.ShortDescription"> Enclose the INSERT statements for each dumped table within SET AUTOCOMMIT=0 and COMMIT statements </entry>
+	<entry key="backup-wizard.no-create-db.ShortDescription"> This option suppresses the CREATE DATABASE statements </entry>
+	<entry key="backup-wizard.no-create-info.ShortDescription"> Do not write CREATE TABLE statements that re-create each dumped table </entry>
+	<entry key="backup-wizard.no-data.ShortDescription"> Do not write any table row information (that is, do not dump table contents) </entry>
+	<entry key="backup-wizard.no-set-names.ShortDescription"> Turn off complete-insert </entry>
+	<entry key="backup-wizard.opt.ShortDescription"> This option is shorthand; it is the same as specifying --add-drop-table --add-locks --create-options
+		--disable-keys --extended-insert --lock-tables --quick --set-charset. </entry>
+	<entry key="backup-wizard.order-by-primary.ShortDescription"> Sorts each table's rows by its primary key, or by its first unique index </entry>
+	<entry key="backup-wizard.password.ShortDescription"> The password to use when connecting to the server </entry>
+	<entry key="backup-wizard.pipe.ShortDescription"> On Windows, connect to server via a named pipe </entry>
+	<entry key="backup-wizard.port.ShortDescription"> The TCP/IP port number to use for the connection </entry>
+	<entry key="backup-wizard.quick.ShortDescription"> Retrieve rows for a table from the server a row at a time </entry>
+	<entry key="backup-wizard.quote-names.ShortDescription"> Quote database, table, and column names within backtick characters </entry>
+	<entry key="backup-wizard.replace.ShortDescription"> Write REPLACE statements rather than INSERT statements </entry>
+	<entry key="backup-wizard.result-file.ShortDescription"> Direct output to a given file </entry>
+	<entry key="backup-wizard.routines.ShortDescription"> Dump stored routines (functions and procedures) from the dumped databases </entry>
+	<entry key="backup-wizard.set-charset.ShortDescription"> Add SET NAMES default_character_set to the output </entry>
+	<entry key="backup-wizard.single-transaction.ShortDescription"> This option issues a BEGIN SQL statement before dumping data from the server </entry>
+	<entry key="backup-wizard.skip-add-drop-table.ShortDescription"> Do not add </entry>
+	<entry key="backup-wizard.skip-add-locks.ShortDescription"> Do not add locks </entry>
+	<entry key="backup-wizard.skip-comments.ShortDescription"> Do not add comments to the dump file </entry>
+	<entry key="backup-wizard.skip-compact.ShortDescription"> Turn off compact </entry>
+	<entry key="backup-wizard.skip-disable-keys.ShortDescription"> Do not disable keys </entry>
+	<entry key="backup-wizard.skip-extended-insert.ShortDescription"> Turn off extended-insert </entry>
+	<entry key="backup-wizard.skip-opt.ShortDescription"> Turn off the options set by opt </entry>
+	<entry key="backup-wizard.skip-quick.ShortDescription"> Do not retrieve rows for a table from the server a row at a time </entry>
+	<entry key="backup-wizard.skip-quote-names.ShortDescription"> Turn off quote names </entry>
+	<entry key="backup-wizard.skip-set-charset.ShortDescription"> Suppress the SET NAMES statement </entry>
+	<entry key="backup-wizard.skip-triggers.ShortDescription"> Turn off triggers 5.0.11 </entry>
+	<entry key="backup-wizard.skip-tz-utc.ShortDescription"> Turn off tz-utc </entry>
+	<entry key="backup-wizard.ssl-ca.ShortDescription"> The path to a file that contains a list of trusted SSL CAs </entry>
+	<entry key="backup-wizard.ssl-capath.ShortDescription"> The path to a directory that contains trusted SSL CA certificates in PEM format </entry>
+	<entry key="backup-wizard.ssl-cert.ShortDescription"> The name of the SSL certificate file to use for establishing a secure connection </entry>
+	<entry key="backup-wizard.ssl-cipher.ShortDescription"> A list of allowable ciphers to use for SSL encryption </entry>
+	<entry key="backup-wizard.ssl-key.ShortDescription"> The name of the SSL key file to use for establishing a secure connection </entry>
+	<entry key="backup-wizard.ssl-verify-server-cert.ShortDescription"> The server's Common Name value in its certificate is verified against the hostname used when connecting to the
+		server </entry>
+	<entry key="backup-wizard.tab.ShortDescription"> Produce tab-separated data files </entry>
+	<entry key="backup-wizard.tables.ShortDescription"> Override the --databases or -B option </entry>
+	<entry key="backup-wizard.triggers.ShortDescription"> Dump triggers for each dumped table </entry>
+	<entry key="backup-wizard.tz-utc.ShortDescription"> Add SET TIME_ZONE='+00:00' to the dump file </entry>
+	<entry key="backup-wizard.verbose.ShortDescription"> Verbose mode </entry>
+	<entry key="backup-wizard.version.ShortDescription"> Display version information and exit </entry>
+	<entry key="backup-wizard.where.ShortDescription"> Dump only rows selected by the given WHERE condition </entry>
+	<entry key="backup-wizard.xml.ShortDescription"> Produce XML output </entry>
+	
+	<entry key="connection.name"> The name which will be used to refer to this database connection.</entry>
+	<entry key="connection.database.url"> Produce XML output </entry>
+	<entry key="connection.database.username"> Produce XML output </entry>
+	<entry key="connection.database.password"> Produce XML output </entry>
+	<entry key="connection.database.driver"> Produce XML output </entry>
+	<entry key="connection.database.model"> Produce XML output </entry>
+	
+	<!--   column wizard -->
+	<entry key="ColumnWizard.is-primary-key.text">
+         <![CDATA[
+        <html>
+            <body>
+                A <b>PRIMARY KEY</b>
+                is a unique where all key columns must be defined as NOT NULL. If they are
+                not explicitly declared as NOT NULL, MySQL declares them so implicitly
+                <i>and silently</i>. A table can have only one PRIMARY KEY. If you do not have
+                a PRIMARY KEY and an application asks for the PRIMARY KEY in your tables,
+                MySQL returns the first UNIQUE index that has no NULL columns as the
+                PRIMARY KEY. In InnoDB tables, having a long PRIMARY KEY wastes a lot of
+                space. <i>See Section 13.2.13, InnoDB Table and Index Structures.</i> In the
+                created table, a PRIMARY KEY is placed first, followed by all UNIQUE
+                indexes, and then the non-unique indexes. This helps the MySQL optimizer
+                to prioritize which index to use and also more quickly to detect
+                duplicated UNIQUE keys.
+            </body>
+       </html>
+           ]]>
+	</entry>
+	<!--   column wizard -->
+	<entry key="ColumnWizard.is-persistent.text">
+         <![CDATA[
+        <html>
+            <body>
+                Setting <b>Persistents</b> indicates the field will be presevered
+                in the database. It is possible to create non-persistent fields
+                which exists only in the bean.
+            </body>
+       </html>
+           ]]>
+	</entry>
+
+	<!--   column wizard -->
+	<entry key="ColumnWizard.ordinal-position.text">
+         <![CDATA[
+        <html>
+            <body>
+                Setting <b>ordinal-posiiton</b> indicates the natural location of 
+                the field in select statements, and within jdbc resultSets.
+            </body>
+       </html>
+           ]]>
+	</entry>
+
+	<!--   column wizard -->
+	<entry key="ColumnWizard.column-size.text">
+         <![CDATA[
+        <html>
+            <body>
+                Setting <b>column-size</b> sets the size of the field, for strings
+                it indicates the number of characters, for numerics the number of
+                digits in the field.
+            </body>
+       </html>
+           ]]>
+	</entry>
+
+	<!--   column wizard -->
+	<entry key="ColumnWizard.decimal-digits.text">
+         <![CDATA[
+        <html>
+            <body>
+                Setting <b>decimal-digits</b> sets the number of digits of accurracy
+                for certain numeric fields.
+            </body>
+       </html>
+           ]]>
+	</entry>
+
+
+	<!--   column wizard -->
+	<entry key="ColumnWizard.is-nullable.text">
+         <![CDATA[
+        <html>
+            <body>
+                Setting <b>is-required</b> indicates whether a value for this 
+                field is required, if is-required is not set, it indicates the
+                can be null, that is is-nullable.
+            </body>
+       </html>
+           ]]>
+	</entry>
+
+	<!--   export wizard -->
+	<entry key="ExportWizard.format.text">
+         <![CDATA[
+        <html>
+            <body>
+               TODO
+            </body>
+       </html>
+           ]]>
+	</entry>
+	<!--   export wizard -->
+	<entry key="ExportWizard.scope.text">
+         <![CDATA[
+        <html>
+            <body>
+             	The options which exist for export include:
+             	<ol>
+             	<li>Export the schema only.</li>
+             	<li>Export the data only.</li>
+             	<li>Export both schema and data.</li>
+             	</ol>
+            </body>
+       </html>
+           ]]>
+	</entry>
+
+
+	<!--   install wizard -->
+	<entry key="InstallWizard.splash-pane.header-text">Welcome to the VOME Install Wizard</entry>
+	<entry key="InstallWizard.splash-pane.body-text">
+         <![CDATA[
+        <html>
+            <body>
+                This wizard will guide you through the installation of the VOME
+                database tool by Viper Software Services.
+                <p>
+                We recommend that you close all other applications before starting
+                the Installation process. This will allow the updating if relevant
+                system files without having to reboot your computer.
+                <p>
+                Click Next when ready to continue the installation.
+            </body>
+       </html>
+           ]]>
+	</entry>
+	<!--   # License wizard -->
+	<entry key="InstallWizard.license-pane.header-text">License Agreement</entry>
+	<entry key="InstallWizard.license-pane.header2-text">Please review the terms of the license agreement before</entry>
+	<entry key="InstallWizard.license-pane.header2A-text">installing VOME</entry>
+	<entry key="InstallWizard.license-body1.text">Press the 'Page Down' key to see the rest of the agreement.</entry>
+	<entry key="InstallWizard.license-pane.body2-text">If you accept the terms of the agreement, click check box below.</entry>
+	<entry key="InstallWizard.license-pane.body2A-text">You must accept the agreement to install VOME. Then click 'Next' to continue.</entry>
+	<entry key="InstallWizard.license-pane.checkbox-text">I accept the terms in the License Agreement</entry>
+	<entry key="InstallWizard.license-pane.no-agreement-text">Please accept the license agreement to continue</entry>
+	<!--   # Directory wizard -->
+	<entry key="InstallWizard.directory-pane.text">Enter the location for the VOME installation, and press next.</entry>
+	<entry key="InstallWizard.directory-pane.header-text">VOME Installation Directory</entry>
+	<!--   # Confirm wizard -->
+	<entry key="InstallWizard.confirm.text">VOME database viewer will be installed in the directory %%DIRECTORY%%, press Next to continue.</entry>
+	<entry key="InstallWizard.confirm.header-text">Confirm Installation Directory</entry>
+	<!--   # Launch Application wizard -->
+	<entry key="InstallWizard.launch-application.text">VOME database viewer has been installed, select the checkbox and press Finish to launch viewer.</entry>
+	<entry key="InstallWizard.launch-application.header-text">Launch Vome Database Viewer</entry>
+	<entry key="InstallWizard.launch-application.checkbox-text">Yes, Launch the Vome database viewer application</entry>
+	<!--   # Miscellanous Parameters (some may NOT be used) -->
+	<entry key="DataTab.label">Data</entry>
+	<entry key="DataTab.tooltip">view/edit table data</entry>
+	<entry key="ConstraintsTab.label">Constraints</entry>
+	<entry key="ConstraintsTab.tooltip">view/edit table constraints</entry>
+	<entry key="ColumnsTab.label">Columns</entry>
+	<entry key="ColumnsTab.tooltip">view/edit table column definitions</entry>
+	<entry key="ColumnPrivilegesTab.label">Column Privileges</entry>
+	<entry key="ColumnPrivilegesTab.tooltip">view/edit table column privilege definitions</entry>
+	<entry key="CrossReferencePane.label">Cross Reference</entry>
+	<entry key="DatabaseParametersTab.label">Parameters</entry>
+	<entry key="DatabaseAttributesTab.label">Attributes</entry>
+	<entry key="DatabaseTypeInfoTab.label">Type Info</entry>
+	<entry key="DatabaseSuperTypesTab.label">Super Types</entry>
+	<entry key="DatabaseTableTypesTab.label">Table Types</entry>
+	<entry key="DatabaseUDTsTab.label">UDTs</entry>
+	<entry key="DatabaseTypeSupportTab.label">Support</entry>
+	<entry key="TablePrivilegesPane.label">Privileges</entry>
+	<entry key="TableKeyPane.label">Keys</entry>
+	<entry key="TableIndexPane.label">Indicies</entry>
+	<entry key="TableBestRowIdentifierPane.label">Best Row Identifier</entry>
+	<entry key="TableVersionColumnsPane.label">Version Columns</entry>
+	<entry key="ColumnPropertiesPane.label">Columns</entry>
+	<entry key="ColumnPrivilegesPane.label">Column Privileges</entry>
+	<entry key="ProcedureDefinitionsPane.label">Definition</entry>
+	<entry key="ProcedureColumnsPane.label">Columns</entry>
+	<entry key="IndexInfoTab.label">Index Info</entry>
+	<entry key="IndexInfoTab.tooltip">view/edit table index information</entry>
+	<!--
+        ############################## ### Database Viewer ##############################
+    -->
+	<entry key="DescribeTableButton.description">Describe Table</entry>
+	<entry key="DescribeTableButton.normal.image">file_open.gif</entry>
+	<entry key="DescribeTableButton.pressed.image">file_open.gif</entry>
+	<entry key="DescribeTableButton.rollover.image">file_open.gif</entry>
+	<entry key="DescribeTableButton.disabled.image">file_open.gif</entry>
+	<!--
+		################################# ### SwingSet Infrastructure ### ################################# ### About Box ###
+	-->
+	<entry key="AboutBox.title">About Swing!</entry>
+	<entry key="AboutBox.ok_button_text">OK</entry>
+	<entry key="AboutBox.accessible_description">SwingSet demo is Copyright (c) 1997-1999 Sun Microsystems, Inc. All Rights Reserved.</entry>
+	<entry key="SourceCode.loading">
+             <![CDATA[
+        <html>
+            <body
+                bgcolor='#ffffff'>Loading and formatting source code, please wait...</body>
+        </html>
+        ]]>
+	</entry>
+	<entry key="Status.loading">Loading: </entry>
+	<entry key="Splash.accessible_description">Welcome to the SwingSet Demo, with examples of all the JFC Swing GUI Toolkit components.</entry>
+	<entry key="MenuBar.accessible_description">Swing demo menu bar</entry>
+	<entry key="Frame.title">SwingSet</entry>
+	<entry key="TabbedPane.src_label">Source Code</entry>
+	<entry key="TabbedPane.src_tooltip">Look at the source code for this demo</entry>
+	<entry key="LafMenu.laf_label">Look &amp; Feel</entry>
+	<entry key="LafMenu.laf_mnemonic">L</entry>
+	<entry key="LafMenu.laf_accessible_description">Menu that allows Look &amp; Feel switching</entry>
+	<entry key="LafMenu.java_label">Java Look &amp; Feel</entry>
+	<entry key="LafMenu.java_mnemonic">J</entry>
+	<entry key="LafMenu.java_accessible_description">The Java Look &amp; Feel</entry>
+	<entry key="LafMenu.mac_label">Macintosh Look &amp; Feel</entry>
+	<entry key="LafMenu.mac_mnemonic">M</entry>
+	<entry key="LafMenu.mac_accessible_description">The Macintosh Look &amp; Feel</entry>
+	<entry key="LafMenu.motif_label">Motif Look &amp; Feel</entry>
+	<entry key="LafMenu.motif_mnemonic">O</entry>
+	<entry key="LafMenu.motif_accessible_description">The Motif Look &amp; Feel</entry>
+	<entry key="LafMenu.windows_label">Windows Style Look &amp; Feel</entry>
+	<entry key="LafMenu.windows_mnemonic">W</entry>
+	<entry key="LafMenu.windows_accessible_description">Windows Style Look &amp; Feel</entry>
+	<entry key="ThemesMenu.themes_label">Themes</entry>
+	<entry key="ThemesMenu.themes_mnemonic">T</entry>
+	<entry key="ThemesMenu.themes_accessible_description">Menu to switch Metal color themes</entry>
+	<entry key="ThemesMenu.aqua_label">Aqua</entry>
+	<entry key="ThemesMenu.aqua_mnemonic">Q</entry>
+	<entry key="ThemesMenu.aqua_accessible_description">A Metal Theme that uses bluish-green colors</entry>
+	<entry key="ThemesMenu.charcoal_label">Charcoal</entry>
+	<entry key="ThemesMenu.charcoal_mnemonic">C</entry>
+	<entry key="ThemesMenu.charcoal_accessible_description">A Metal Theme that uses dark grey colors</entry>
+	<entry key="ThemesMenu.contrast_label">High Contrast</entry>
+	<entry key="ThemesMenu.contrast_mnemonic">H</entry>
+	<entry key="ThemesMenu.contrast_accessible_description">A High Contrast Theme</entry>
+	<entry key="ThemesMenu.default_label">Default</entry>
+	<entry key="ThemesMenu.default_mnemonic">D</entry>
+	<entry key="ThemesMenu.default_accessible_description">The Default blue/purple Metal Theme</entry>
+	<entry key="ThemesMenu.emerald_label">Emerald</entry>
+	<entry key="ThemesMenu.emerald_mnemonic">E</entry>
+	<entry key="ThemesMenu.emerald_accessible_description">A Metal Theme that uses green colors</entry>
+	<entry key="ThemesMenu.ruby_label">Ruby</entry>
+	<entry key="ThemesMenu.ruby_mnemonic">R</entry>
+	<entry key="ThemesMenu.ruby_accessible_description">A Metal Theme that uses red colors</entry>
+	<entry key="AudioMenu.audio_label">Audio</entry>
+	<entry key="AudioMenu.audio_mnemonic">A</entry>
+	<entry key="AudioMenu.audio_accessible_description">Menu to switch the amount of auditory feedback available within the Java look and feel</entry>
+	<entry key="AudioMenu.on_label">On</entry>
+	<entry key="AudioMenu.on_mnemonic">O</entry>
+	<entry key="AudioMenu.on_accessible_description">Turn on all auditory feedback for the Java look and feel</entry>
+	<entry key="AudioMenu.default_label">Default</entry>
+	<entry key="AudioMenu.default_mnemonic">D</entry>
+	<entry key="AudioMenu.default_accessible_description">Turn on the standard amount of auditory feedback for the Java look and feel</entry>
+	<entry key="AudioMenu.off_label">Off</entry>
+	<entry key="AudioMenu.off_mnemonic">f</entry>
+	<entry key="AudioMenu.off_accessible_description">Turn off all auditory feedback for the Java look and feel</entry>
+	<entry key="Tooltip_label">Tool Tips</entry>
+	<entry key="ToolTipMenu.tooltip_mnemonic">i</entry>
+	<entry key="ToolTipMenu.tooltip_accessible_description">Menu to turn on and off tool tips</entry>
+	<entry key="ToolTipMenu.on_label">On</entry>
+	<entry key="ToolTipMenu.on_mnemonic">O</entry>
+	<entry key="ToolTipMenu.on_accessible_description">Turn on tool tips</entry>
+	<entry key="ToolTipMenu.off_label">Off</entry>
+	<entry key="ToolTipMenu.off_mnemonic">f</entry>
+	<entry key="ToolTipMenu.off_accessible_description">Turn off tool tips</entry>
+	<entry key="FileMenu.file_label">File</entry>
+	<entry key="FileMenu.file_mnemonic">F</entry>
+	<entry key="FileMenu.accessible_description">File Menu</entry>
+	<entry key="FileMenu.about_label">About</entry>
+	<entry key="FileMenu.about_mnemonic">b</entry>
+	<entry key="FileMenu.about_accessible_description">Find out about the SwingSet application</entry>
+	<entry key="FileMenu.open_label">Open</entry>
+	<entry key="FileMenu.open_mnemonic">O</entry>
+	<entry key="FileMenu.open_accessible_description">Placeholder menu item for opening a file</entry>
+	<entry key="FileMenu.save_label">Save</entry>
+	<entry key="FileMenu.save_mnemonic">S</entry>
+	<entry key="FileMenu.save_accessible_description">Placeholder menu item for saving a file</entry>
+	<entry key="FileMenu.save_as_label">Save As...</entry>
+	<entry key="FileMenu.save_as_mnemonic">A</entry>
+	<entry key="FileMenu.save_as_accessible_description">Placeholder menu item for saving a file with a new name</entry>
+	<entry key="FileMenu.exit_label">Exit</entry>
+	<entry key="FileMenu.exit_mnemonic">x</entry>
+	<entry key="FileMenu.exit_accessible_description">Exit the SwingSet application</entry>
+	<entry key="MultiMenu.multi_label">Multiscreen</entry>
+	<entry key="MultiMenu.multi_mnemonic">M</entry>
+	<entry key="MultiMenu.multi_accessible_description">Multiscreen Menu</entry>
+	<entry key="MultiMenu.all_label">Create SwingSet on all screens</entry>
+	<entry key="MultiMenu.all_mnemonic">A</entry>
+	<entry key="MultiMenu.all_accessible_description">Create a SwingSet window on every screen</entry>
+	<entry key="MultiMenu.single_label">Create SwingSet on screen</entry>
+	<entry key="MultiMenu.single_accessible_description">Create a SwingSet window on screen</entry>
+</properties>

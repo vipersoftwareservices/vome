@@ -1,0 +1,59 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0">
+	<xs:element name="grammar" type="Grammar" />
+	<xs:element name="rule" type="Rule" />
+	<xs:element name="use-rule" type="UseRule" />
+	<xs:element name="literal" type="Literal" />
+	<xs:element name="choice" type="Choice" />
+	<xs:element name="term" type="Term" />
+	<xs:complexType name="Grammar">
+		<xs:sequence>
+			<xs:element name="rule" type="Rule" minOccurs="0"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Item" abstract="true">
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="required" type="xs:boolean" default="false" />
+	</xs:complexType>
+	<xs:complexType name="Literal">
+		<xs:complexContent>
+			<xs:extension base="Item">
+				<xs:attribute name="value" type="xs:string" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Term">
+		<xs:complexContent>
+			<xs:extension base="Item">
+				<xs:attribute name="value" type="xs:string" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UseRule">
+		<xs:complexContent>
+			<xs:extension base="Item">
+				<xs:attribute name="value" type="xs:string" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Choice">
+		<xs:complexContent>
+			<xs:extension base="Item">
+				<xs:sequence>
+					<xs:any minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="Rule">
+		<xs:complexContent>
+			<xs:extension base="Item">
+				<xs:sequence>
+					<xs:any minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databaseConnections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.vipersoftwareservices.com/schemas/databases.xsd">
+	<connection name="test-work">
+		<username>root</username>
+        <password>root</password> 
+		<database-url>jdbc:mysql://localhost:3306</database-url>
+		<driver>com.mysql.jdbc.Driver</driver>
+	</connection>
+	<connection name="test">
+		<username>root</username>
+        <password>ENC:lvZkFEUgMadIgqV4Kj77Uw==</password>
+		<database-url>jdbc:mysql://localhost:3306</database-url>
+		<driver>com.mysql.jdbc.Driver</driver>
+	</connection>
+</databaseConnections>

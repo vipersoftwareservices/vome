@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment/>
+<entry key="SHOW USERS">SHOW USERS</entry>
+<entry key="select * from roster&#13;&#10;">select * from roster&#13;
+</entry>
+<entry key="select * from season&#13;&#10;">select * from season&#13;
+</entry>
+<entry key="select name from baseball.division">select name from baseball.division</entry>
+<entry key="select * from word where name like &quot;ac%&quot;">select * from word where name like "ac%"</entry>
+<entry key="select * from baseball.division">select * from baseball.division</entry>
+<entry key="select * from team&#13;&#10;">select * from team&#13;
+</entry>
+<entry key="select * from dictionary.word where name like &quot;ac%&quot;">select * from dictionary.word where name like "ac%"</entry>
+<entry key="SHOW USER">SHOW USER</entry>
+<entry key="select * from baseball.player">select * from baseball.player</entry>
+<entry key="select * from1 baseball.player">select * from1 baseball.player</entry>
+<entry key="select * from division">select * from division</entry>
+<entry key="select * from player">select * from player</entry>
+<entry key="SHOW USERS&#13;&#10;">SHOW USERS&#13;
+</entry>
+<entry key="select * from test.localtable;">select * from test.localtable;</entry>
+<entry key="select * from play">select * from play</entry>
+<entry key="select * from baseball">select * from baseball</entry>
+<entry key="SHOW GRANTS">SHOW GRANTS</entry>
+<entry key="select * from word where name like &quot;ac%&quot;;">select * from word where name like "ac%";</entry>
+<entry key="show character set;">show character set;</entry>
+<entry key=""/>
+</properties>

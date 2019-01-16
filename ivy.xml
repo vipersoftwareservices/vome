@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+	<info organisation="com.viper" module="database" />
+	<configurations defaultconfmapping="default->master">
+		<conf name="libgen" description="Application jars" />
+		<conf name="drivers" description="Dataabse driver jars" />
+		<conf name="libdev" description="Development jars (Dont ship)" />
+	</configurations>
+	<dependencies defaultconf="default">
+
+		<!-- DATABASE DRIVERS -->
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.35" conf="drivers->master" />
+		<dependency org="com.h2database" name="h2" rev="1.4.192" conf="drivers->master" />
+		<!-- <dependency org="com.oracle" name="ojdbc14" rev="10.2.0.3.0" conf="drivers->master" /> -->
+
+		<!-- LIBGEN S/B COMMON -->
+		<!-- Apache Johnzon -->
+		<dependency org="javax.json" name="javax.json-api" rev="1.1.2" conf="libgen->master" />
+		<dependency org="org.apache.johnzon" name="johnzon-core" rev="1.1.8" conf="libgen->master" />
+		<dependency org="org.apache.johnzon" name="johnzon-jaxrs" rev="1.1.8" conf="libgen->master" />
+		<dependency org="org.apache.johnzon" name="johnzon-jsonb" rev="1.1.8" conf="libgen->master" />
+		<dependency org="org.apache.johnzon" name="johnzon-mapper" rev="1.1.8" conf="libgen->master" />
+		<dependency org="javax.annotation" name="javax.annotation-api" rev="1.3.2" conf="libgen->master" />
+
+		<!-- JACKSON -->
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.9.6" conf="libgen->master" />
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.9.6" conf="libgen->master" />
+		<dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.9.6" conf="libgen->master" />
+
+		<!-- COMMONS -->
+		<dependency org="org.apache.commons" name="commons-configuration2" rev="2.3" conf="libgen->master" />
+		<dependency org="org.apache.commons" name="commons-csv" rev="1.6" conf="libgen->master" />
+		<dependency org="org.apache.commons" name="commons-dbcp2" rev="2.5.0" conf="libgen->master" />
+		<dependency org="org.apache.commons" name="commons-jexl" rev="2.1.1" conf="libgen->master" />
+		<dependency org="org.apache.commons" name="commons-lang3" rev="3.7" conf="libgen->master" />
+		<dependency org="org.apache.commons" name="commons-pool2" rev="2.6.0" conf="libgen->master" />
+		<dependency org="commons-lang" name="commons-lang" rev="2.6" conf="libgen->master" />
+		<dependency org="commons-dbutils" name="commons-dbutils" rev="1.7" conf="libgen->master" />
+		<dependency org="commons-codec" name="commons-codec" rev="1.11" conf="libgen->master" />
+		<dependency org="org.hamcrest" name="hamcrest-all" rev="1.3" conf="libgen->master" />
+		<dependency org="org.json" name="json" rev="20180130" conf="libgen->master" />
+		<dependency org="org.xmlunit" name="xmlunit-core" rev="2.6.1" conf="libgen->master" />
+		<dependency org="org.xmlunit" name="xmlunit-matchers" rev="2.6.1" conf="libgen->master" />
+		<dependency org="org.apache.logging.log4j" name="log4j" rev="2.9.1" conf="libgen->master" />
+		<dependency org="log4j" name="log4j" rev="1.2.17" conf="libgen->master" />
+
+		<dependency org="org.jfxtras" name="jfxtras-labs" rev="8.0-r5" conf="libgen->master" />
+		<dependency org="org.jfxtras" name="jfxtras-all" rev="9.0-r1" conf="libgen->master" />
+		<dependency org="org.controlsfx" name="controlsfx" rev="8.40.10" conf="libgen->master" />
+		<dependency org="org.controlsfx" name="openjfx-dialogs" rev="1.0.3" conf="libgen->master" /> 
+		<dependency org="org.webjars.bowergithub.templarian" name="materialdesign-webfont" rev="2.4.85" conf="libgen->master" />
+
+		<!-- DEVELOPMENT (DONT USE PRODUCTION -->
+		<dependency org="javax.servlet" name="javax.servlet-api" rev="4.0.1" conf="libdev->master" />
+		<dependency org="org.apache.maven.shared" name="maven-dependency-analyzer" rev="1.10" conf="libdev->master" />
+		<dependency org="org.jacoco" name="org.jacoco.agent" rev="0.8.1" conf="libdev->master" />
+		<dependency org="org.jacoco" name="org.jacoco.core" rev="0.8.1" conf="libdev->master" />
+		<dependency org="org.jacoco" name="org.jacoco.ant" rev="0.8.1" conf="libdev->master" />
+		<dependency org="org.jacoco" name="org.jacoco.report" rev="0.8.1" conf="libdev->master" />
+		<dependency org="junit" name="junit" rev="4.12" conf="libdev->master" />
+		<dependency org="junitperf" name="junitperf" rev="1.8" conf="libdev->master" />
+		<dependency org="com.carrotsearch" name="junit-benchmarks" rev="0.7.2" conf="libdev->master" />
+		<dependency org="com.puppycrawl.tools" name="checkstyle" rev="8.11" conf="libdev->master" />
+		<dependency org="org.ow2.asm" name="asm-commons" rev="6.2.1" conf="libdev->master" />
+		<dependency org="org.ow2.asm" name="asm-tree" rev="6.2.1" conf="libdev->master" />
+		<dependency org="org.ow2.asm" name="asm-analysis" rev="6.2.1" conf="libdev->master" />
+		<dependency org="org.ow2.asm" name="asm" rev="6.2.1" conf="libdev->master" />
+		<dependency org="org.antlr" name="antlr4-runtime" rev="4.7.1" conf="libdev->master" />
+		<dependency org="commons-cli" name="commons-cli" rev="1.4" conf="libdev->master" />
+
+	</dependencies>
+</ivy-module>

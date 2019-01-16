@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<project name="vome" default="all" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:jacoco="antlib:org.jacoco.ant">
+	<property file="${basedir}/build.properties" />
+	<property name="name" value="vome" />
+	<property name="version" value="2.0" />
+	<property name="build.dir" value="${basedir}/build" />
+	<property name="test.name" value="Test*" />
+	<!-- ===================================================================== -->
+	<!-- Defines the classpath used for compilation and test. -->
+	<!-- ===================================================================== -->
+	<path id="classpath.main">
+		<pathelement path="${build.dir}/classes" />
+		<pathelement path="${basedir}/src" />
+		<fileset dir="${basedir}/lib" includes="**/*.jar" />
+	</path>
+	<path id="classpath.tools">
+		<path refid="classpath.main" />
+	</path>
+	<path id="classpath.test">
+		<path refid="classpath.main" />
+	</path>
+	<!-- =================================================================== -->
+	<!-- Cleans up generated stuff -->
+	<!-- =================================================================== -->
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete dir="${basedir}/srcgen" />
+		<delete dir="help/JavaHelpSearch" />
+	</target>
+	<!-- =================================================================== -->
+	<!-- Prepares the build directory -->
+	<!-- =================================================================== -->
+	<target name="prepare">
+		<tstamp />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.dir}/lib" />
+		<mkdir dir="${build.dir}/classes/images" />
+		<mkdir dir="${build.dir}/reports/raw" />
+		<mkdir dir="${build.dir}/doc/api" />
+		<mkdir dir="${basedir}/srcgen" />
+		<mkdir dir="${basedir}/unit/data/results" />
+		<copy todir="${build.dir}/classes">
+			<fileset dir="${basedir}/etc" includes="*" />
+			<fileset dir="${basedir}" includes="images/*" />
+		</copy>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Update the junit in the ant directory -->
+	<!-- =================================================================== -->
+	<target name="resolve" depends="prepare">
+		<ivy:retrieve pattern="${basedir}/lib/[conf]/[artifact]-[revision].[ext]" conf="*" />
+		<ivy:report conf="*" todir="${build.dir}" />
+	</target>
+	<!-- =================================================================== -->
+	<!-- Task Definitions -->
+	<!-- =================================================================== -->
+	<target name="taskdefs" depends="resolve">
+		<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask" classpathref="classpath.tools" />
+		<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml" classpathref="classpath.tools" />
+		<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties" classpathref="classpath.tools" />
+	</target>
+	<!-- =================================================================== -->
+	<!-- Generate -->
+	<!-- =================================================================== -->
+	<target name="srcgen" depends="taskdefs">
+		<xjc schema="${basedir}/etc/grammar.xsd" destdir="${basedir}/srcgen" package="com.viper.vome.bean">
+			<arg value="-npa" />
+		</xjc>
+		<xjc schema="${basedir}/etc/schemas/database.xsd" destdir="${basedir}/srcgen" package="com.viper.vome.model">
+			<arg line="-npa -extension -Xinject-code" />
+			<binding dir="${basedir}/etc/schemas" includes="toString.xjb" />
+			<binding dir="${basedir}/etc/schemas" includes="simple-database.xjb" />
+		</xjc>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Compiles the source code -->
+	<!-- =================================================================== -->
+	<target name="compile" depends="srcgen">
+		<javac destdir="${build.dir}/classes" nowarn="${nowarn}" debug="${debug}" source="${source}" target="${target}" deprecation="${deprecation}" optimize="${optimize}">
+			<src path="src:srcgen:unit" />
+			<classpath refid="classpath.main" />
+		</javac>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Creates the online help.jar (as per JavaHelp 2.0) -->
+	<!-- =================================================================== -->
+	<target name="help.jar" depends="compile">
+		<delete dir="${build}/help/JavaHelpSearch" />
+		<!-- <xslt basedir="help/guide" classpath="${saxon.home}/saxon9.jar" destdir="${build.dir}/help/guide" style="${docbook.xsl.home}/javahelp/javahelp.xsl"> 
+			</xslt> -->
+		<java fork="true" jar="${help.home}/javahelp/bin/jhindexer.jar">
+			<arg line="-db help/JavaHelpSearch help" />
+		</java>
+		<jar jarfile="${build.dir}/lib/help.jar">
+			<fileset dir="help" includes="**" />
+		</jar>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Creates the executable jar archive -->
+	<!-- =================================================================== -->
+	<target name="jar" depends="help.jar">
+		<manifest file="${build.dir}/MANIFEST.MF">
+			<attribute name="Manifest-Version" value="1.0" />
+			<attribute name="Sealed" value="false" />
+			<attribute name="MainTest-Version" value="${version}" />
+			<attribute name="Build-Date" value="${TODAY}" />
+			<attribute name="Build-Time" value="${TSTAMP}" />
+			<attribute name="Main-Class" value="com.viper.vome.DatabaseViewer" />
+		</manifest>
+		<jar jarfile="${build.dir}/${name}.jar" manifest="${build.dir}/MANIFEST.MF" filesetmanifest="skip">
+			<fileset dir="${build.dir}/classes" includes="**" />
+			<fileset dir="${basedir}/src" excludes="**/*.java" />
+			<fileset dir="${basedir}" includes="help/**" />
+			<zipgroupfileset dir="${basedir}/lib">
+				<include name="**/*.jar" />
+				<exclude name="libdev/*.jar" />
+				<exclude name="local/jacoco*.jar" />
+			</zipgroupfileset>
+		</jar>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Creates the executable jar archive -->
+	<!-- =================================================================== -->
+	<target name="src.jar" depends="jar">
+		<jar jarfile="${build.dir}/${name}-src.jar">
+			<zipfileset dir="${basedir}" prefix="${name}" includes="etc/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="help/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="images/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="lib/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="src/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="srcgen/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="unit/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="*" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="*.*" />
+		</jar>
+	</target>
+	<target name="install" depends="src.jar">
+		<manifest file="${build.dir}/install.txt">
+			<attribute name="Manifest-Version" value="1.0" />
+			<attribute name="Sealed" value="false" />
+			<attribute name="MainTest-Version" value="${version}" />
+			<attribute name="Build-Date" value="${TODAY}" />
+			<attribute name="Build-Time" value="${TSTAMP}" />
+			<attribute name="Main-Class" value="com.viper.vome.InstallWizard" />
+		</manifest>
+		<jar jarfile="${build.dir}/${name}-installer.jar" manifest="${build.dir}/install.txt" filesetmanifest="mergewithoutmain">
+			<fileset dir="${build.dir}/classes" />
+			<fileset dir="${build.dir}" includes="${name}.jar" />
+			<fileset dir="${basedir}/etc" includes="databases.xml" />
+			<zipgroupfileset dir="${basedir}/lib" includes="*.jar" />
+		</jar>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Creates the API documentation -->
+	<!-- =================================================================== -->
+	<target name="javadocs" depends="install">
+		<mkdir dir="${build.dir}/doc/api" />
+		<javadoc packagenames="*" sourcepath="${basedir}/src" destdir="${build.dir}/doc/api" author="true" version="true" windowtitle="${name} ${version} API" doctitle="${name}" footer="${javadocs.footer}">
+			<classpath refid="classpath.main" />
+		</javadoc>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Runs the viwer -->
+	<!-- =================================================================== -->
+	<target name="vome">
+		<java fork="true" jar="${build.dir}/${name}.jar">
+			<jvmarg line="${jvm.args}" />
+		</java>
+	</target>
+	<!-- =================================================================== -->
+	<!-- Runs the test -->
+	<!-- =================================================================== -->
+
+	<target name="junit">
+		<jacoco:coverage>
+			<junit fork='true' forkmode="once" printsummary="yes" haltonfailure="no" showoutput="yes">
+				<sysproperty key="jub.consumers" value="H2" />
+				<sysproperty key="jub.charts.dir" value="${basedir}/benchmarks" />
+				<sysproperty key="jub.db.file" value="${basedir}/benchmarks/.benchmarks" />
+				<sysproperty key="basedir" value="${basedir}" />
+				<classpath>
+					<path refid="classpath.main" />
+					<path refid="classpath.tools" />
+				</classpath>
+				<formatter type="xml" />
+				<batchtest fork="yes" haltonfailure="no" todir="${build.dir}/reports/raw">
+					<fileset dir="${basedir}/unit" includes="**/Test*.java" />
+					<formatter type="xml" />
+				</batchtest>
+				<jvmarg line="${jvm.args}" />
+			</junit>
+		</jacoco:coverage>
+	</target>
+	<target name="junit-report">
+		<junitreport todir="${build.dir}/reports/raw">
+			<fileset dir="${build.dir}/reports/raw" includes="TEST-*.xml" />
+			<report format="frames" todir="${build.dir}/reports" />
+		</junitreport>
+	</target>
+	<target name="jacoco-report">
+		<jacoco:report>
+			<executiondata>
+				<file file="jacoco.exec" />
+			</executiondata>
+			<structure name="Vome Project">
+				<classfiles>
+					<fileset dir="${build.dir}/classes" />
+				</classfiles>
+				<sourcefiles encoding="UTF-8">
+					<fileset dir="${basedir}/src" />
+				</sourcefiles>
+			</structure>
+			<html destdir="${build.dir}/jacoco/" />
+		</jacoco:report>
+	</target>
+	<!-- =================================================================== -->
+	<!-- -->
+	<!-- =================================================================== -->
+	<target name="test" depends="taskdefs,junit,junit-report,jacoco-report" />
+	<target name="cruise-control" depends="clean,install,javadocs,test" />
+	<target name="all" depends="clean,install" />
+</project>

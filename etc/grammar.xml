@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.vipersoftwareservices.com/schemas/grammar.xsd">
+	<rule name='ALTER DOMAIN'>
+		<literal required='true' value='alter' />
+		<literal required='true' value='domain' />
+	</rule>
+	<!--   alter domain statement -->
+	<rule name='ALTER TABLE'>
+		<literal required='true' value='alter' />
+		<literal required='true' value='table' />
+	</rule>
+	<!--   alter table statement -->
+	<rule name='CLOSE cursor'>
+		<literal required='true' value='close' />
+		<term name="cursor" />
+	</rule>
+	<!--   close statement -->
+	<rule name='Column definition'>
+		<literal required='true'></literal>
+	</rule>
+	<!--   column definition -->
+	<rule name='COMMIT WORK'>
+		<literal required='true'></literal>
+	</rule>
+	<!--   commit statement -->
+	<rule name='CONNECT'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    connect statement -->
+	<rule name='CREATE ASSERTION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    assertion definition -->
+	<rule name='CREATE CHARACTER SET'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    character set definition -->
+	<rule name='CREATE COLLATION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    collation definition -->
+	<rule name='CREATE DOMAIN'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    domain definition -->
+	<rule name='CREATE FUNCTION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    schema function -->
+	<rule name='CREATE PROCEDURE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    schema procedure -->
+	<rule name='CREATE SCHEMA'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    schema definition -->
+	<rule name='CREATE TABLE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    table definition -->
+	<rule name='CREATE TRANSLATION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    translation definition -->
+	<rule name='CREATE TRIGGER'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    trigger definition -->
+	<rule name='CREATE VIEW'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    view definition -->
+	<rule name='Data type'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    data type -->
+	<rule name='DEALLOCATE PREPARE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    deallocate prepared statement -->
+	<rule name='DECLARE cursor'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    declare cursor  dynamic declare cursor -->
+	<rule name='DECLARE LOCAL TEMPORARY TABLE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    temporary table declaration-->
+	<rule name='DELETE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--
+		delete statement: positioned delete statement: searched dynamic delete
+		statement: positioned
+	-->
+	<rule name='DESCRIBE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    describe statement-->
+	<rule name='DESCRIPTOR statements'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    system descriptor statement-->
+	<rule name='DISCONNECT'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    disconnect statement-->
+	<rule name='EXECUTE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    execute statement-->
+	<rule name='EXECUTE IMMEDIATE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    execute immediate statement-->
+	<rule name='FETCH cursor'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    fetch statement-->
+	<rule name='FROM clause'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    from clause-->
+	<rule name='GET DIAGNOSTICS'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    get diagnostics statement-->
+	<rule name='GRANT'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    grant statement-->
+	<rule name='GROUP BY clause'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    group by clause-->
+	<rule name='HAVING clause'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    having clause-->
+	<rule name='INSERT'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    insert statement-->
+	<rule name='Literals'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    literal-->
+	<rule name='Keywords'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    key word-->
+	<rule name='MERGE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    merge statement-->
+	<rule name='OPEN cursor'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    open statement-->
+	<rule name='ORDER BY clause'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    order by clause-->
+	<rule name='PREPARE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    prepare statement-->
+	<rule name='REVOKE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    revoke statement-->
+	<rule name='ROLLBACK WORK'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    rollback statement-->
+	<rule name='SAVEPOINT'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    savepoint statement-->
+	<rule name='Search condition'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    search condition regular expression-->
+	<rule name='SELECT'>
+		<literal required='true' value='SELECT' />
+		<choice>
+			<literal  value='ALL' />
+			<literal  value='DISTINCT' />
+			<literal  value='DISTINCTROW' />
+		</choice>
+		<literal  value='HIGH_PRIORITY' />
+		<literal  value='STRAIGHT_JOIN' />
+		<literal  value='SQL_SMALL_RESULT' />
+		<literal  value='SQL_BIG_RESULT' />
+		<literal  value='SQL_BUFFER_RESULT' />
+		<choice>
+			<literal  value='SQL_CACHE' />
+			<literal  value='SQL_NO_CACHE' />
+		</choice>
+		<literal  value='SQL_CALC_FOUND_ROWS' />
+		<use-rule name="select-expr" required="true" />
+		<rule>
+			<literal required="true" value=',' />
+			<use-rule name="select-expr" required="true" />
+		</rule>
+		<rule>
+			<literal  value='FROM' />
+			<term name="table-reference" />
+		</rule>
+		<rule>
+			<literal  value='WHERE' />
+			<term name="where-condition" />
+		</rule>
+		<rule>
+			<literal  value='GROUP BY' />
+			<choice>
+				<term name="column-name" />
+				<term name="expression" />
+				<term name="position" />
+			</choice>
+			<choice>
+				<literal  value='ASC' />
+				<literal  value='DESC' />
+			</choice>
+			<literal  value=',' />
+			<literal  value='... [WITH ROLLUP]]' />
+		</rule>
+		<rule>
+			<literal  value='HAVING' />
+			<rule name="where-condition"></rule>
+		</rule>
+		<rule>
+			<literal  value='ORDER BY' />
+			<choice>
+				<term name="column-name" />
+				<term name="expression" />
+				<term name="position" />
+			</choice>
+			<choice>
+				<literal  value='ASC' />
+				<literal  value='DESC' />
+			</choice>
+			<literal  value=',' />
+			<literal  value='...]' />
+		</rule>
+
+		<rule>
+			<literal  value='LIMIT' />
+			<rule name="[offset,] row_count | row_count OFFSET offset}"></rule>
+		</rule>
+		<rule>
+			<literal  value='PROCEDURE' />
+			<rule name="procedure_name(argument_list)"></rule>
+		</rule>
+		<rule>
+			<literal  value='INTO OUTFILE' />
+			<term name="filename" />
+		</rule>
+		<rule>
+			<literal  value='CHARACTER SET' />
+			<term name="charset-name" />
+		</rule>
+		<choice>
+			<rule>
+				<literal  value='INTO DUMPFILE' />
+				<term name="filename" />
+			</rule>
+			<rule>
+				<literal  value='INTO' />
+				<term name="varname" /> <!--  var_name [, var_name] -->
+			</rule>
+		</choice>
+		<choice>
+			<literal  value='FOR UPDATE' />
+			<literal  value='LOCK IN SHARE MODE' />
+		</choice>
+	</rule>
+	<rule name="select-expr">
+		<choice>
+			<literal  value='*' />
+			<term name="column-name" />
+		</choice>
+	</rule>
+	<!--    query specification-->
+	<rule name='SET CATALOG'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set catalog statement-->
+	<rule name='SET CONNECTION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set connection statement-->
+	<rule name='SET CONSTRAINTS'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set constraints mode statement-->
+	<rule name='SET NAMES'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set names statement-->
+	<rule name='SET SCHEMA'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set schema statement-->
+	<rule name='SET SESSION AUTHORIZATION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set session user identifier statement-->
+	<rule name='SET TIME ZONE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set local time zone statement-->
+	<rule name='SET TRANSACTION'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    set transaction statement-->
+	<rule name='SQL Client MODULE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    SQL-client module definition-->
+	<rule name='UPDATE'>
+		<literal required='true'></literal>
+	</rule>
+	<!--
+		update statement: positioned update statement: searched dynamic update
+		statement: positioned
+	-->
+	<rule name='Value expression'>
+		<literal required='true'></literal>
+	</rule>
+	<!--    value expression-->
+	<rule name='WHERE clause'>
+		<literal required='true'></literal>
+	</rule>
+</grammar>

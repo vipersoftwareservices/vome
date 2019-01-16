@@ -1,0 +1,116 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc" elementFormDefault="qualified">
+	<xsd:element name="databaseConnections" type="DatabaseConnections" />
+	<xsd:complexType name="DatabaseConnections">
+		<xsd:sequence>
+			<xsd:element name="connection" type="DatabaseConnection" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="hosts" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" />
+		<xsd:attribute name="filename" type="xsd:string" />
+		<xsd:attribute name="resource" type="xsd:string" />
+		<xsd:attribute name="project-state" type="ProjectStateType" default="opened" />
+	</xsd:complexType>
+	<xsd:element name="databaseConnection" type="DatabaseConnection" />
+	<xsd:complexType name="DatabaseConnection">
+		<xsd:sequence>
+			<xsd:element name="ssh" type="SSHConnection" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="database-timeout" type="xsd:int" default="0" />
+			<xsd:element name="connection-kind" type="ConnectionKind" default="TCP" />
+			<xsd:element name="database-url" type="xsd:string" />
+			<xsd:element name="driver" type="xsd:string" />
+			<xsd:element name="username" type="xsd:string" />
+			<xsd:element name="password" type="xsd:string" />
+			<xsd:element name="jndi-name" type="xsd:string" />
+			<xsd:element name="datasource" type="xsd:string" />
+			<xsd:element name="datasource-class" type="xsd:string" />
+			<xsd:element name="description" type="xsd:string" />
+			<xsd:element name="param" type="Param" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="name-case" type="CaseType" default="normal" />
+			<xsd:element name="vendor" type="xsd:string" default="mysql" />
+			<xsd:element name="model" type="xsd:string"  />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" />
+	</xsd:complexType>
+	<!-- local host and local port are part of the jdc url -->
+	<xsd:complexType name="SSHConnection">
+		<xsd:sequence>
+			<xsd:element name="ssh-username" type="xsd:string" />
+			<xsd:element name="ssh-password" type="xsd:string" />
+			<xsd:element name="ssh-host" type="xsd:string" />
+			<xsd:element name="ssh-port" type="xsd:int" />
+			<xsd:element name="remote-host" type="xsd:string" />
+			<xsd:element name="remote-port" type="xsd:int" />
+			<xsd:element name="local-port" type="xsd:int" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="ProjectStateType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="opened" />
+			<xsd:enumeration value="closed" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ConnectionKind">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="TCP" />
+			<xsd:enumeration value="Named Pipe" />
+			<xsd:enumeration value="Memory" />
+			<xsd:enumeration value="SSL" />
+			<xsd:enumeration value="SSH" />
+			<xsd:enumeration value="HTTP Proxy" />
+			<xsd:enumeration value="HTTP Tunnel" />
+			<xsd:enumeration value="Data Source" />
+			<xsd:enumeration value="Resource Ref" />
+			<xsd:enumeration value="JDBC Connection Pool" />
+			<xsd:enumeration value="JDBC Resource" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType name="Param">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="name" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:simpleType name="CaseType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="normal" />
+			<xsd:enumeration value="upper" />
+			<xsd:enumeration value="lower" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="TableType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="table" />
+			<xsd:enumeration value="local-temporary" />
+			<xsd:enumeration value="bean" />
+			<xsd:enumeration value="view" />
+			<xsd:enumeration value="viewapp" />
+			<xsd:enumeration value="system-table" />
+			<xsd:enumeration value="system-view" />
+			<xsd:enumeration value="global-temporary" />
+			<xsd:enumeration value="alias" />
+			<xsd:enumeration value="synonym" />
+			<xsd:enumeration value="data" />
+			<xsd:enumeration value="base-table" />
+			<xsd:enumeration value="crud-bean" />
+			<xsd:enumeration value="interface" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IndexClassType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="unique" />
+			<xsd:enumeration value="fulltext" />
+			<xsd:enumeration value="spatial" />
+			<xsd:enumeration value="default" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="IndexType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="btree" />
+			<xsd:enumeration value="hash" />
+			<xsd:enumeration value="default" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
