@@ -41,11 +41,11 @@ What things you need to install the software and how to install them
 * java 1.6 or better. 
 ```
 
-### Download VOME binary
+### Download VOME binary windows installer 
 
 1. Download the vome zip file, and unzip it.
 
-* [Download VOME binary](http://www.tnevin.com/viper/software/downloads/vome.jar) 
+* [VOME binary](http://www.tnevin.com/viper/software/downloads/vome-installer.jar) 
  
 ### Prerequisites to building VOME
 
