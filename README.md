@@ -22,19 +22,40 @@ The VOME is standalone application and has the following features:
 ## Additional Documentation
 
 In progress: 
+
 * [Authors Home Page](http://www.tnevin.com)
+
+## Screenshot of main VOME window
+
+![alt VOME main window](doc/images/overview.png)
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
+ 
+### Prerequisites to running VOME
 
-### Prerequisites
+What things you need to install the software and how to install them
+
+```
+* java 1.6 or better. 
+```
+
+### Download VOME binary
+
+1. Download the vome zip file, and unzip it.
+
+```
+http://www.tnevin.com/viper/software/downloads/vome.jar
+```
+ 
+### Prerequisites to building VOME
 
 What things you need to install the software and how to install them
 
 ```
 * java 1.6 or better.
-* ant 1.9 or better (optional).
+* ant 1.9 or better.
 * For Windows, install CygWin, latest.
 ```
 
