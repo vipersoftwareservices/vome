@@ -27,7 +27,7 @@ In progress:
 
 ## Screenshot of main VOME window
 
-![alt VOME main window](doc/images/overview.png)
+![VOME main window](doc/images/overview.png)
 
 ## Getting Started
 
@@ -45,9 +45,7 @@ What things you need to install the software and how to install them
 
 1. Download the vome zip file, and unzip it.
 
-```
-http://www.tnevin.com/viper/software/downloads/vome.jar
-```
+* [Download VOME binary](http://www.tnevin.com/viper/software/downloads/vome.jar) 
  
 ### Prerequisites to building VOME
 
