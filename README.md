@@ -25,9 +25,9 @@ In progress:
 
 * [Authors Home Page](http://www.tnevin.com)
 
-## Screenshot of main VOME window
- 
-![VOME Main Window](doc/images/overview.jpg)
+## Screenshot of main VOME window 
+      
+![VOME Main Window](doc/images/overview.jpg?raw=true)
 
 ## Getting Started
 
