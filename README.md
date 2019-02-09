@@ -26,8 +26,8 @@ In progress:
 * [Authors Home Page](http://www.tnevin.com)
 
 ## Screenshot of main VOME window
-
-![VOME main window](doc/images/overview.png)
+ 
+![VOME Main Window](doc/images/overview.png)
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
  
 ### Prerequisites to running VOME
 
-What things you need to install the software and how to install them
+1. What things you need to install the software and how to install them
 
 ```
 * java 1.6 or better. 
@@ -43,13 +43,13 @@ What things you need to install the software and how to install them
 
 ### Download VOME binary windows installer 
 
-1. Download the vome zip file, and unzip it.
+2. Download the VOME install jar file, and run the installation jar file.
 
 * [VOME binary](http://www.tnevin.com/viper/software/downloads/vome-installer.jar) 
  
 ### Prerequisites to building VOME
 
-What things you need to install the software and how to install them
+1. What things you need to install the software and how to install them
 
 ```
 * java 1.6 or better.
@@ -61,13 +61,13 @@ Note: ant commands have been run and tested using cygwin bash shell, dos shell, 
 
 ### Installing
 
-1. Download the vome zip file, and unzip it.
+2. Download the vome zip file, and unzip it.
 
 ```
 https://github.com/vipersoftwareservices/vome
 ```
 
-2. Run the build script if building sources is desired, runtime jars are available.
+3. Run the build script if building sources is desired, runtime jars are available.
 
 ```
 ant clean all
