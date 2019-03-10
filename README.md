@@ -1,8 +1,6 @@
 ![alt VOME banner](doc/images/viper-wide-banner.jpg)
 
-# VOME (In Progress)
-
-[VOME](http://www.tnevin.com)
+# VOME (In Progress) 
 
 VOME is a database viewer tool. It is a standalone application written in Java using JavaFX. Databases are access via SQL using JDBC.
 
@@ -27,7 +25,7 @@ In progress:
 
 ## Screenshot of main VOME window 
       
-![VOME Main Window](doc/images/overview.jpg?raw=true)
+![alt VOME Main Window](doc/images/overview.jpg?raw=true "VOME Main Window") 
 
 ## Getting Started
 
