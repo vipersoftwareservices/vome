@@ -1,4 +1,4 @@
-![alt VOME banner](doc/images/viper-wide-banner.jpg)
+![VOME banner](doc/images/viper-wide-banner.jpg)
 
 # VOME (In Progress) 
 
@@ -25,7 +25,7 @@ In progress:
 
 ## Screenshot of main VOME window 
       
-![VOME Main Window](doc/images/overview.jpg) 
+![VOME Main Window](https://raw.githubusercontent.com/vipersoftwareservices/vome/master/doc/images/overview.jpg) 
 
 ## Getting Started
 
