@@ -25,7 +25,8 @@ In progress:
 
 ## Screenshot of main VOME window 
       
-![VOME Main Window](doc/images/overview1.png) 
+![VOME Main Window](doc/images/overview1.jpg)
+
 
 ## Getting Started
 
