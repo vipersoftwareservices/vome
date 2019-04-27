@@ -2,107 +2,35 @@
 <databaseConnections filename="databases.xml">
     <connection name="xcipio-10.0.162.12">
         <database-timeout>0</database-timeout>
-        <show-errors>false</show-errors>
-        <show-drop-errors>false</show-drop-errors>
-        <create-database>false</create-database>
-        <auto-commit>false</auto-commit>
-        <verbose>false</verbose>
-        <number-of-rows-limit>0</number-of-rows-limit>
-        <cache-timeout>0</cache-timeout>
         <database-url>jdbc:mysql://localhost:9000?useInformationSchema=true&amp;CatalogMeansCurrent=false
 		</database-url>
         <driver>com.mysql.jdbc.Driver</driver>
         <username>root</username>
         <password>root</password>
         <vendor>mysql</vendor>
-        <pool-max-total>0</pool-max-total>
-        <pool-max-idle>0</pool-max-idle>
-        <pool-min-idle>0</pool-min-idle>
-        <pool-max-wait-millis>0</pool-max-wait-millis>
-        <pool-time-between-eviction-runs-millis>0</pool-time-between-eviction-runs-millis>
-        <pool-min-evictable-idle-time-millis>0</pool-min-evictable-idle-time-millis>
-        <pool-test-while-idle>false</pool-test-while-idle>
-        <pool-test-on-borrow>false</pool-test-on-borrow>
-        <pool-remove-abandoned>false</pool-remove-abandoned>
-        <pool-remove-abandoned-timeout-seconds>0</pool-remove-abandoned-timeout-seconds>
-        <pool-log-abandoned>false</pool-log-abandoned>
     </connection>
     <connection name="test-work">
         <database-timeout>0</database-timeout>
-        <show-errors>false</show-errors>
-        <show-drop-errors>false</show-drop-errors>
-        <create-database>false</create-database>
-        <auto-commit>false</auto-commit>
-        <verbose>false</verbose>
-        <number-of-rows-limit>0</number-of-rows-limit>
-        <cache-timeout>0</cache-timeout>
         <database-url>jdbc:mysql://localhost:3306</database-url>
         <driver>com.mysql.jdbc.Driver</driver>
         <username>root</username>
         <password>root</password>
         <vendor>mysql</vendor>
-        <pool-max-total>0</pool-max-total>
-        <pool-max-idle>0</pool-max-idle>
-        <pool-min-idle>0</pool-min-idle>
-        <pool-max-wait-millis>0</pool-max-wait-millis>
-        <pool-time-between-eviction-runs-millis>0</pool-time-between-eviction-runs-millis>
-        <pool-min-evictable-idle-time-millis>0</pool-min-evictable-idle-time-millis>
-        <pool-test-while-idle>false</pool-test-while-idle>
-        <pool-test-on-borrow>false</pool-test-on-borrow>
-        <pool-remove-abandoned>false</pool-remove-abandoned>
-        <pool-remove-abandoned-timeout-seconds>0</pool-remove-abandoned-timeout-seconds>
-        <pool-log-abandoned>false</pool-log-abandoned>
     </connection>
     <connection name="test">
         <database-timeout>0</database-timeout>
-        <show-errors>false</show-errors>
-        <show-drop-errors>false</show-drop-errors>
-        <create-database>false</create-database>
-        <auto-commit>false</auto-commit>
-        <verbose>false</verbose>
-        <number-of-rows-limit>0</number-of-rows-limit>
-        <cache-timeout>0</cache-timeout>
         <database-url>jdbc:mysql://localhost:3306?useInformationSchema=true&amp;CatalogMeansCurrent=false</database-url>
         <driver>com.mysql.jdbc.Driver</driver>
         <username>root</username>
         <password>ENC:lvZkFEUgMadIgqV4Kj77Uw==</password>
         <vendor>mysql</vendor>
-        <pool-max-total>0</pool-max-total>
-        <pool-max-idle>0</pool-max-idle>
-        <pool-min-idle>0</pool-min-idle>
-        <pool-max-wait-millis>0</pool-max-wait-millis>
-        <pool-time-between-eviction-runs-millis>0</pool-time-between-eviction-runs-millis>
-        <pool-min-evictable-idle-time-millis>0</pool-min-evictable-idle-time-millis>
-        <pool-test-while-idle>false</pool-test-while-idle>
-        <pool-test-on-borrow>false</pool-test-on-borrow>
-        <pool-remove-abandoned>false</pool-remove-abandoned>
-        <pool-remove-abandoned-timeout-seconds>0</pool-remove-abandoned-timeout-seconds>
-        <pool-log-abandoned>false</pool-log-abandoned>
     </connection>
     <connection name="Test1">
         <database-timeout>0</database-timeout>
-        <show-errors>false</show-errors>
-        <show-drop-errors>false</show-drop-errors>
-        <create-database>false</create-database>
-        <auto-commit>false</auto-commit>
-        <verbose>false</verbose>
-        <number-of-rows-limit>0</number-of-rows-limit>
-        <cache-timeout>0</cache-timeout>
         <database-url>jdbc:mysql://localhost:3306</database-url>
         <driver>com.mysql.jdbc.Driver</driver>
         <username>root</username>
         <password>p@ssw0rd9</password>
         <model>model</model>
-        <pool-max-total>0</pool-max-total>
-        <pool-max-idle>0</pool-max-idle>
-        <pool-min-idle>0</pool-min-idle>
-        <pool-max-wait-millis>0</pool-max-wait-millis>
-        <pool-time-between-eviction-runs-millis>0</pool-time-between-eviction-runs-millis>
-        <pool-min-evictable-idle-time-millis>0</pool-min-evictable-idle-time-millis>
-        <pool-test-while-idle>false</pool-test-while-idle>
-        <pool-test-on-borrow>false</pool-test-on-borrow>
-        <pool-remove-abandoned>false</pool-remove-abandoned>
-        <pool-remove-abandoned-timeout-seconds>0</pool-remove-abandoned-timeout-seconds>
-        <pool-log-abandoned>false</pool-log-abandoned>
     </connection>
 </databaseConnections>

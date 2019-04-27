@@ -38,18 +38,12 @@ import com.viper.vome.beans.JAXBUtils;
 import com.viper.vome.model.DatabaseConnection;
 import com.viper.vome.model.DatabaseConnections;
 
-public class Connections {
-
-    private static String DEFAULT_FILENAME = "databases.xml";
+public class Connections { 
 
     private static final List<Connection> connections = new ArrayList<Connection>();
     private static DatabaseConnections databaseConnections = new DatabaseConnections();
 
-    public static String getFilename() {
-
-        if (databaseConnections.getFilename() == null) {
-            return DEFAULT_FILENAME;
-        }
+    public static String getFilename() { 
         return databaseConnections.getFilename();
     }
 

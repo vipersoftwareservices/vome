@@ -44,7 +44,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 2. Download the VOME install jar file, and run the installation jar file.
 
-* [VOME binary](http://www.tnevin.com/viper/software/downloads/vome-installer.jar) 
+* [VOME binary jar](http://www.tnevin.com/viper/software/downloads/vome-installer-2.0.jar) 
+* [VOME binary zip](http://www.tnevin.com/viper/software/downloads/vome-installation-2.0.zip) 
  
 ### Prerequisites to building VOME
 

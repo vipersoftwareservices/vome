@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?><history>
+<item sql="select * from `bliss`.`user` limit 0,10000" performance="44" timestamp="1555807164725"  />
+<item sql="select * from `bliss`.`alarm` limit 0,10000" performance="329" timestamp="1555807905844"  />
+</history>

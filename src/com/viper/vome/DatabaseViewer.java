@@ -93,6 +93,7 @@ public class DatabaseViewer extends Application {
         System.setProperty("glass.accessible.force", "false");
 
         Session session = Session.getInstance();
+        setDatabaseFilename();
 
         session.setMetaData(loadMetaData());
         session.setStage(stage);
@@ -136,7 +137,35 @@ public class DatabaseViewer extends Application {
 
         navigationPane.prefHeightProperty().bind(splitPane.heightProperty());
 
-        String filename = LocaleUtil.getProperty("databases-filename");
+        VBox box = new VBox();
+        VBox.setVgrow(splitPane, Priority.ALWAYS);
+
+        box.getChildren().addAll(createMenuBar(), createToolPane(), splitPane, session.getStatusField(), progressBar);
+
+        actions.LookAndFeelAction(null);
+        openDefaultProject(session.getDatabasePropertyFilename());
+
+        return new Scene(box, DEFAULT_WIDTH, DEFAULT_HEIGHT);
+    }
+
+    private final void setDatabaseFilename() {
+
+        Session session = Session.getInstance();
+        Application.Parameters parameters = getParameters();
+        List<String> args = parameters.getRaw();
+        
+        String filename = null;
+        for (int i = 0; i < args.size(); i++) {
+            if ("--config".equalsIgnoreCase(args.get(i))) {
+                filename = args.get(i + 1);
+            }
+        }
+        if (filename == null) {
+            filename = LocaleUtil.getProperty("databases-filename");
+        }
+
+        session.setDatabasePropertyFilename(filename);
+
         try {
             if (!new File(filename).exists()) {
                 UIUtil.showError("Database Connections failed to find file connections: " + filename);
@@ -144,16 +173,6 @@ public class DatabaseViewer extends Application {
         } catch (Exception e) {
             UIUtil.showError("Database Connections failed for filename: " + filename);
         }
-
-        VBox box = new VBox();
-        VBox.setVgrow(splitPane, Priority.ALWAYS);
-
-        box.getChildren().addAll(createMenuBar(), createToolPane(), splitPane, session.getStatusField(), progressBar);
-
-        actions.LookAndFeelAction(null);
-        openDefaultProject("databases.xml");
-
-        return new Scene(box, DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
 
     private void openDefaultProject(String filename) {
@@ -205,7 +224,7 @@ public class DatabaseViewer extends Application {
         viewMenu.getItems().add(UIUtil.newCheckMenuItem("Row Numbers", actions::RowNumberAction));
         viewMenu.getItems().add(new SeparatorMenuItem());
         viewMenu.getItems().add(UIUtil.newMenuItem("Format Table", actions::FormatTableAction));
-        viewMenu.getItems().add(UIUtil.newMenuItem("Format Column", actions::FormatColumnAction)); 
+        viewMenu.getItems().add(UIUtil.newMenuItem("Format Column", actions::FormatColumnAction));
 
         // Tools menu
         Menu toolsMenu = new Menu("Tools");
