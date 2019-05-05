@@ -3,6 +3,7 @@
 	<property name="name" value="vome" />
 	<property name="version" value="2.0" />
 	<property name="build.dir" value="${basedir}/build" />
+	<property name="help.home" value="TODO" />
 	<property name="test.name" value="Test*" />
 	<property name="source" value="1.8" />
 	<property name="target" value="1.8" />
@@ -12,7 +13,7 @@
 	<property name="jvm.deprecation" value="-Xlint:deprecation" />
 	<property name="jvm.args" value="-Xmx1024M -Djava.util.logging.config.file=../logging.properties" />
 	<property name="jvm.debug.args" value="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000" />
-	
+
 	<!-- ===================================================================== -->
 	<!-- Defines the classpath used for compilation and test. -->
 	<!-- ===================================================================== -->
@@ -44,7 +45,7 @@
 		<mkdir dir="${build.dir}/lib" />
 		<mkdir dir="${build.dir}/classes/images" />
 		<mkdir dir="${build.dir}/reports/raw" />
-		<mkdir dir="${build.dir}/doc/api" /> 
+		<mkdir dir="${build.dir}/doc/api" />
 		<mkdir dir="${basedir}/srcgen" />
 		<mkdir dir="${basedir}/unit/data/results" />
 		<copy todir="${build.dir}/classes">
@@ -120,9 +121,10 @@
 			<fileset dir="${basedir}/src" excludes="**/*.java" />
 			<fileset dir="${basedir}" includes="help/**" />
 			<zipgroupfileset dir="${basedir}/lib">
-				<include name="**/*.jar" />
-				<exclude name="libdev/*.jar" />
-				<exclude name="local/jacoco*.jar" />
+				<include name="drivers/*.jar" />
+				<include name="libgen/*.jar" />
+				<include name="local/*.jar" />
+				<include name="*.jar" />
 			</zipgroupfileset>
 		</jar>
 	</target>
@@ -131,12 +133,12 @@
 	<!-- =================================================================== -->
 	<target name="src.jar" depends="jar">
 		<jar jarfile="${build.dir}/${name}-sources-${version}.jar">
+			<zipfileset dir="${basedir}" prefix="${name}" includes="doc/**" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="etc/**" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="help/**" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="images/**" />
-			<zipfileset dir="${basedir}" prefix="${name}" includes="lib/**" />
+			<zipfileset dir="${basedir}" prefix="${name}" includes="lib/local/**" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="src/**" />
-			<zipfileset dir="${basedir}" prefix="${name}" includes="srcgen/**" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="unit/**" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="*" />
 			<zipfileset dir="${basedir}" prefix="${name}" includes="*.*" />
@@ -164,11 +166,11 @@
 	<!-- =================================================================== -->
 	<!-- Build vome.zip  -->
 	<!-- =================================================================== -->
-	<target name="zip" depends="install"> 
+	<target name="zip" depends="install">
 		<zip destfile="${build.dir}/${name}-installation-${version}.zip">
 			<zipfileset prefix="${name}-${version}/lib" dir="${build.dir}" includes="${name}.jar" />
 			<zipfileset prefix="${name}-${version}/bin" dir="${basedir}/etc/bin" includes="*.*" />
-			<zipfileset prefix="${name}-${version}/etc" dir="${basedir}/etc" includes="databases.xml" /> 
+			<zipfileset prefix="${name}-${version}/etc" dir="${basedir}/etc" includes="databases.xml" />
 		</zip>
 	</target>
 	<!-- =================================================================== -->
@@ -193,7 +195,7 @@
 	<!-- =================================================================== -->
 
 	<target name="junit">
-		<jacoco:coverage>
+		<jacoco:coverage destfile="${build.dir}/jacoco.exe">
 			<junit fork='true' forkmode="once" printsummary="yes" haltonfailure="no" showoutput="yes">
 				<sysproperty key="jub.consumers" value="H2" />
 				<sysproperty key="jub.charts.dir" value="${basedir}/benchmarks" />
@@ -221,7 +223,7 @@
 	<target name="jacoco-report">
 		<jacoco:report>
 			<executiondata>
-				<file file="jacoco.exec" />
+				<file file="${build.dir}/jacoco.exec" />
 			</executiondata>
 			<structure name="Vome Project">
 				<classfiles>

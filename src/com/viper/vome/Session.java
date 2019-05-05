@@ -96,7 +96,7 @@ public class Session {
     private Color nonBandingColor = Color.GREY;
     private Color bandingColor = Color.WHITE;
     private Color fontColor = Color.BLACK;
-    private Font tableFont = Font.getDefault();
+    private Font tableFont = null;
     private Dialog dialog = null;
     private String databasePropertyFilename = "etc/databases.xml";
 
@@ -193,6 +193,9 @@ public class Session {
     }
 
     public Font getTableFont() {
+        if (tableFont == null) {
+            tableFont = Font.getDefault();
+        }
         return tableFont;
     }
 

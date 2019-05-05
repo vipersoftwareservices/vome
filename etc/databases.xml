@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<databaseConnections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.vipersoftwareservices.com/schemas/databases.xsd">
-	<connection name="test-work">
+<databaseConnections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.vipersoftwareservices.com/schemas/databases.xsd"> 
+	<connection name="test1">
 		<username>root</username>
-        <password>root</password> 
+		<password>ENC:lvZkFEUgMadIgqV4Kj77Uw==</password>
 		<database-url>jdbc:mysql://localhost:3306</database-url>
 		<driver>com.mysql.jdbc.Driver</driver>
 	</connection>
-	<connection name="test">
+	<connection name="test2">
 		<username>root</username>
-        <password>ENC:lvZkFEUgMadIgqV4Kj77Uw==</password>
+		<password>root</password>
 		<database-url>jdbc:mysql://localhost:3306</database-url>
 		<driver>com.mysql.jdbc.Driver</driver>
+	</connection>
+	<connection name="test3">
+		<database-timeout>0</database-timeout>
+		<database-url>jdbc:oracle:thin:@//localhost:1521/service_name</database-url>
+		<driver>oracle.jdbc.driver.OracleDriver</driver>
+		<username>root</username>
+		<password>root</password>
+		<vendor>oracle</vendor>
 	</connection>
 </databaseConnections>

@@ -40,6 +40,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.viper.test.AbstractTestCase;
+import com.viper.vome.Session;
 import com.viper.vome.dao.Column;
 import com.viper.vome.dao.Connection;
 import com.viper.vome.dao.Connections;
@@ -98,6 +99,7 @@ public class TestConnection extends AbstractTestCase {
 
     private Connection storeRandomData(String databasename, String tablename, int nrows) throws Exception {
 
+        Connections.openDatabaseConnections(Session.getInstance().getDatabasePropertyFilename());
         Connection connection = openConnection();
 
         connection.loadDatabases();
@@ -212,7 +214,7 @@ public class TestConnection extends AbstractTestCase {
     @Test
     public void testLoadDatabaseConnections() throws Exception {
 
-        Connections.openDatabaseConnections(Connections.getFilename());
+        Connections.openDatabaseConnections(Session.getInstance().getDatabasePropertyFilename());
         Assert.assertNotNull(getCallerMethodName() + ", DatabaseConnections ", Connections.getDatabaseConnections());
         Assert.assertTrue(getCallerMethodName() + ", #DatabaseConnections ", Connections.getDatabaseConnectionsList().size() > 0);
 
